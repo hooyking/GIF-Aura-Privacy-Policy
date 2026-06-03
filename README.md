@@ -1,1 +1,1 @@
-# GIF-Flow-Privacy-Policy
+# GIF-Aura-Privacy-Policy
