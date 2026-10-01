@@ -74,17 +74,27 @@
         <p>We only request device permissions strictly necessary to provide core creative features:</p>
         <ul>
             <li><strong>Photo Library & Storage Access:</strong> Required to let you select photos/videos for editing and save generated GIFs or Live Photos back to your device album.</li>
-            <li><strong>Camera & Microphone (Optional):</strong> Requested only if you choose to capture live photos or video footage directly within the media picker.</li>
+            <li><strong>Camera & Microphone (Optional):</strong> Requested only if you choose to capture live photos, record video footage, or create selfie expression works directly within the camera or media picker.</li>
         </ul>
         <p>All media captured or accessed via these permissions remains strictly on your local device.</p>
 
-        <h2>4. Children's Privacy</h2>
+        <h2>4. Face Data and Portrait Segmentation Policy</h2>
+        <p>GIF Aura respects user privacy and strictly adheres to industry data protection standards and platform privacy requirements regarding camera and visual processing data:</p>
+        <ul>
+            <li><strong>No Face Data or Biometric Collection:</strong> GIF Aura does NOT collect, extract, capture, store, or share any face data, facial recognition data, facial biometric templates, or facial feature mesh points across any platform. The application is designed solely for creative media editing and animation, never for identity verification or facial recognition.</li>
+            <li><strong>On-Device Architecture & Frameworks:</strong> In features such as "Selfie Emoji", the application utilizes system-native frameworks and on-device processing strictly locally on your device (using Apple's native Vision framework (<code>VNGeneratePersonSegmentationRequest</code>) and AVFoundation on iOS devices, and embedded on-device machine learning models such as LiteRT / TensorFlow Lite via local CPU/XNNPACK acceleration on other supported platforms). This process solely generates a binary silhouette mask separating the human subject from the background to power the optional "Remove BG" effect. It does NOT detect facial landmarks, analyze facial geometry, or use TrueDepth camera APIs (such as ARFaceAnchor), nor are any camera feeds or inference results ever transmitted off the device.</li>
+            <li><strong>Ephemeral In-Memory Processing & Zero Retention:</strong> Across all platforms, all image frame analysis and silhouette masking take place strictly in real-time within volatile device memory (RAM). No face data or segmentation masks are ever written to persistent disk storage, databases, or remote servers. All temporary frame buffers are immediately discarded after each frame is rendered or when the camera session ends. The retention period for face/segmentation data is zero (0 seconds).</li>
+            <li><strong>No Third-Party Sharing or Cloud Transmission:</strong> No camera video frames, face data, or processed silhouettes are ever transmitted, shared with, sold to, or disclosed to any third-party services, advertising networks, analytics SDKs, or cloud servers. The entire segmentation pipeline operates 100% offline.</li>
+            <li><strong>User Control:</strong> Completed GIFs, videos, or stickers created using the Selfie Emoji feature are stored exclusively on your local device storage or Photo Library only upon your explicit action.</li>
+        </ul>
+
+        <h2>5. Children's Privacy</h2>
         <p>Our application does not knowingly collect or solicit any personal information from children under the age of 13. Since all operations are processed locally, no personal data is gathered from any user.</p>
 
-        <h2>5. Changes to This Privacy Policy</h2>
+        <h2>6. Changes to This Privacy Policy</h2>
         <p>We may update our Privacy Policy periodically. Any updates will be published on this page and reflected within the app's version release notes.</p>
 
-        <h2>6. Contact Us</h2>
+        <h2>7. Contact Us</h2>
         <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy, please contact our support team at: <a href="mailto:326871884@qq.com">326871884@qq.com</a>.</p>
     </div>
 </body>
